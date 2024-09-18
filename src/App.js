@@ -4,7 +4,7 @@ import ParticlesComponent from './components/particles';
 import Header from './containers/header/Header';
 import About from './containers/about/About';
 import Sports from './containers/sports/Sports';
-
+import FormPage from './containers/form/Form';
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,9 @@ function App() {
       </div>
       <div id='sports-page'>
         <Sports/>
+      </div>
+      <div id='book-slots' className='gradient__bg'>
+        <FormPage/>
       </div>
       
     </div>

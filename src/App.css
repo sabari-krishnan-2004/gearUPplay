@@ -91,6 +91,10 @@ a {
   width: 100%;
   height: 100%;
 }
+#book-slots{
+  width: 100%;
+  height: 150%;
+}
 #particles canvas{
   z-index: -10;
   height: 100%;

@@ -1,0 +1,117 @@
+/* src/pages/form.css */
+
+body {
+    
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: var(--font-family);
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.form-container {
+    
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 0.25rem; /* Reduced gap between label and input */
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem; /* Reduced gap between the label and input */
+    margin-bottom: 0.75rem; /* Reduced gap between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background: #FF4820;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #e03e1a; /* Darker shade of the button */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Align phone number and total number of persons side by side */
+.side-by-side {
+    display: flex;
+    gap: 1rem; /* Reduced gap between the fields */
+}
+
+.side-by-side label {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="datetime-local"],
+    textarea {
+        font-size: 0.875rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.875rem;
+    }
+}

@@ -1,167 +1,165 @@
+/* Header styles */
+.gpt3__header {
+  display: flex;
+  position: relative; /* Create a stacking context */
+  z-index: 10; /* Higher than particles background */
+  padding: 5rem; /* Add padding if needed */
+  align-items: left; /* Center items vertically if needed */
+  justify-content: center; /* Center items horizontally if needed */
+  min-height: 100vh; /* Ensure header takes full viewport height */
+}
 
+.gpt3__header-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* Ensure content is above particles */
+  z-index: 3; /* Higher than particles background */
+  text-align: left; /* Center text */
+}
+
+.gpt3__header-content h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  color: #ffffff; /* Ensure text is visible */
+  margin-bottom: 1rem; /* Add margin for spacing */
+  text-align: left;
+}
+
+.gpt3__header-content p {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  font-size: 18px; /* Adjust font size if needed */
+  line-height: 28px; /* Adjust line height if needed */
+  text-align: left; /* Center text */
+}
+
+.gpt3__header-content__input {
+  width: 100%;
+  display: flex;
+  margin: 2rem 0 1rem;
+  justify-content: center; /* Center input elements */
+}
+
+.gpt3__header-content__input input {
   
-  /* Header styles */
+  border-radius: 5px 0 0 5px;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: var(--font-family);
+  flex: 2;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 1rem;
+  color: #ffffff; /* Ensure text inside input is visible */
+}
+
+.gpt3__header-content__input button {
+  background: #FF4820;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: var(--font-family);
+  flex: 0.6;
+  width: 100%;
+  min-height: 50px;
+  outline: none;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0 1rem;
+  border: none;
+  margin-left: -10rem;
+}
+
+.gpt3__header-content__people {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center people text */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.gpt3__header-content__people p {
+  font-size: 12px;
+  font-family: var(--font-family);
+  line-height: 38px;
+  margin: 0 0 0 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center; /* Center text */
+}
+
+.gpt3__header-image {
+  transform: translate(30px, -30px); /* Moves the image 20px to the right and 30px up */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.gpt3__header-image img {
+  max-width: 100%; /* Adjust this value to control the size */
+  height: auto; /* Ensures the aspect ratio is maintained */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1050px) {
   .gpt3__header {
-    display: flex;
-    position: relative; /* Create a stacking context */
-    z-index: 10; /* Higher than particles background */
-    padding: 5rem; /* Add padding if needed */
-    align-items: center; /* Center items vertically if needed */
-    justify-content: center; /* Center items horizontally if needed */
-    min-height: 100vh; /* Ensure header takes full viewport height */
-  }
-  
-  .gpt3__header-content {
-    display: flex;
-    flex: 1;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    position: relative; /* Ensure content is above particles */
-    z-index: 3; /* Higher than particles background */
-    text-align: left; /* Center text */
   }
-  
+
+  .gpt3__header-content {
+    margin: 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .gpt3__header-content h1 {
-    font-family: var(--font-family);
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 75px;
-    letter-spacing: -0.04em;
-    color: #ffffff; /* Ensure text is visible */
-    margin-bottom: 1rem; /* Add margin for spacing */
+    font-size: 48px;
+    line-height: 60px;
   }
-  
+
   .gpt3__header-content p {
-    font-family: var(--font-family);
-    color: var(--color-text);
-    margin-top: 1.5rem;
-    font-size: 18px; /* Adjust font size if needed */
-    line-height: 28px; /* Adjust line height if needed */
-    text-align: left; /* Center text */
+    font-size: 16px;
+    line-height: 24px;
   }
-  
-  .gpt3__header-content__input {
-    width: 100%;
-    display: flex;
-    margin: 2rem 0 1rem;
-    justify-content: center; /* Center input elements */
-  }
-  
-  .gpt3__header-content__input input {
-    
-    border-radius: 5px 0 0 5px;
-    font-size: 20px;
-    line-height: 27px;
-    font-family: var(--font-family);
-    flex: 2;
-    width: 100%;
-    min-height: 50px;
-    padding: 0 1rem;
-    color: #ffffff; /* Ensure text inside input is visible */
-  }
-  
-  .gpt3__header-content__input button {
-    background: #FF4820;
-    border-radius: 8px;
-    font-size: 20px;
-    line-height: 27px;
-    font-family: var(--font-family);
-    flex: 0.6;
-    width: 100%;
-    min-height: 50px;
-    outline: none;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 0 1rem;
-    border: none;
-    margin-left: -10rem;
-  }
-  
+
   .gpt3__header-content__people {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Center people text */
-    align-items: center;
-    margin-top: 2rem;
+    flex-direction: column;
   }
-  
+
   .gpt3__header-content__people p {
+    margin: 0;
+  }
+
+  .gpt3__header-content__input input,
+  .gpt3__header-content__input button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .gpt3__header-content h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .gpt3__header-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .gpt3__header-content__input input,
+  .gpt3__header-content__input button {
     font-size: 12px;
-    font-family: var(--font-family);
-    line-height: 38px;
-    margin: 0 0 0 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-align: center; /* Center text */
+    line-height: 16px;
   }
-  
-  .gpt3__header-image {
-    transform: translate(30px, -30px); /* Moves the image 20px to the right and 30px up */
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .gpt3__header-image img {
-    max-width: 100%; /* Adjust this value to control the size */
-    height: auto; /* Ensures the aspect ratio is maintained */
-  }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 1050px) {
-    .gpt3__header {
-      flex-direction: column;
-    }
-  
-    .gpt3__header-content {
-      margin: 0 0 3rem;
-    }
-  }
-  
-  @media screen and (max-width: 650px) {
-    .gpt3__header-content h1 {
-      font-size: 48px;
-      line-height: 60px;
-    }
-  
-    .gpt3__header-content p {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  
-    .gpt3__header-content__people {
-      flex-direction: column;
-    }
-  
-    .gpt3__header-content__people p {
-      margin: 0;
-    }
-  
-    .gpt3__header-content__input input,
-    .gpt3__header-content__input button {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-  
-  @media screen and (max-width: 490px) {
-    .gpt3__header-content h1 {
-      font-size: 36px;
-      line-height: 48px;
-    }
-  
-    .gpt3__header-content p {
-      font-size: 14px;
-      line-height: 24px;
-    }
-  
-    .gpt3__header-content__input input,
-    .gpt3__header-content__input button {
-      font-size: 12px;
-      line-height: 16px;
-    }
-  }
-  
+}
