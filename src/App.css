@@ -47,9 +47,25 @@ a {
 .App {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh; /* Use min-height to accommodate the content */
+  overflow: auto; /* Allow scrolling */
 }
+
+
+.gradient__bg {
+  position: relative; /* Ensure other content is above the particles background */
+  z-index: 1;
+}
+
+#particles {
+  position: absolute; /* Ensure it is placed behind other content */
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind header and other elements */
+  top: 0;
+  left: 0;
+}
+
 
 .particles {
   position: absolute;
@@ -57,7 +73,29 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensures particles are behind other content */
+  
+}
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Lower than header's z-index */
+}
+#about-page{
+  width: 100%;
+  height: 100%;
+}
+#sports-page{
+  width: 100%;
+  height: 100%;
+}
+#particles canvas{
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 @-webkit-keyframes scale-up-center {

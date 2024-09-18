@@ -1,0 +1,119 @@
+.sports-container {
+    padding: 4rem 6rem;
+    background-color: #F1F1F9;
+    text-align: center;
+}
+.sports-container h1 {
+    font-family: var(--font-family);
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 800; /* Make the text bold */
+    color: black; /* Dark color for better readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add subtle text shadow */
+    margin-bottom: 2rem; /* Space below the heading */
+    padding: 0.5rem 1rem; /* Optional: Add padding for better spacing */
+   
+    border-radius: 8px; /* Optional: Rounded corners for the background */
+    display: inline-block; /* Optional: Shrink-wrap the heading to its content */
+}
+
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        ". top-left top-right"
+        "left central-image right"
+        ". bottom-left bottom-right";
+    gap: 1rem; /* Space between grid items */
+    justify-content: center; /* Center grid items horizontally */
+    align-items: center; /* Center grid items vertically */
+    position: relative;
+}
+
+.central-image {
+    grid-area: central-image;
+    position: relative; /* Needed for positioning the overlay */
+    max-width: 100%; /* Ensure the central image is responsive */
+    height: auto;
+}
+
+.surrounding-image {
+    max-width: 100%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Add some rounding to images */
+    position: relative; /* Needed for positioning the overlay */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.image-container {
+    position: relative; /* Needed to position the overlay text */
+    display: inline-block; /* Keep image and overlay together */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center overlay text */
+    color: #ffffff;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for better readability */
+    opacity: 0; /* Hide overlay text initially */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay text */
+}
+
+.surrounding-image:hover {
+    filter: brightness(50%); /* Darken image on hover */
+}
+
+.surrounding-image:hover + .overlay {
+    opacity: 1; /* Show overlay text on hover */
+}
+
+.top-left {
+    grid-area: top-left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -60%;
+}
+
+.top-right {
+    grid-area: top-right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -60%;
+}
+
+.bottom-left {
+    grid-area: bottom-left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -60%;
+}
+
+.bottom-right {
+    grid-area: bottom-right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -60%;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

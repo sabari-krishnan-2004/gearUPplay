@@ -1,0 +1,55 @@
+.about-container {
+    padding: 4rem 6rem;
+    background-color: #F1F1F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .abouthead {
+    display: flex;
+    justify-content: flex-end; /* Align heading image to the right */
+    width: 100%; /* Ensure it spans the full width */
+    margin-bottom: -4rem; /* Space between heading and content */
+  }
+  
+  .abouthead img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    width: 100%; /* Ensure it spans the full width */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Allow absolute positioning inside */
+  }
+  
+  .about-content img {
+    max-width: 50%; /* Adjust as needed */
+    height: auto; 
+    margin-right: 2rem; /* Space between image and text */
+  }
+  
+  .about-content p {
+    font-family: var(--font-family);
+    font-size: 1.5rem; /* Reduce font size to decrease number of lines */
+    max-width: 100%; /* Adjust width to fit content better */
+    position: relative; /* Allow positioning adjustments */
+    margin: 0; /* Remove default margins */
+    padding-left: 2rem; /* Increase left padding */
+    padding-right: 2rem; /* Increase right padding */
+    font-weight: 700;
+    border-radius: 8px; /* Optional rounded corners */
+    line-height: 1.4; /* Adjust line-height to reduce space between lines */
+  }
+  
+  .highlight {
+    background: linear-gradient(to right, #FF0000, #000000); /* Gradient from red to black */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent so the gradient is visible */
+  }
+  

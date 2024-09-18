@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 6rem;
-    background-color: var(--color-footer); 
+    padding: 0.8rem 2rem; 
+    background-color: white; 
   }
   
   .gpt3__navbar-links {
@@ -15,11 +15,12 @@
   
   .gpt3__navbar-links_logo {
     margin-right: 2rem;
+    margin-left: -20px; /* Move the logo to the left */
   }
   
   .gpt3__navbar-links_logo img {
-    width: 62.56px;
-    height: 16.02px;
+    width: 150px; /* Adjust the width to make the logo bigger */
+  height: auto; /* Ensure the aspect ratio remains intact */
   }
   
   .gpt3__navbar-links_container {
@@ -36,7 +37,7 @@
   .gpt3__navbar-links_container p,
   .gpt3__navbar-sign p,
   .gpt3__navbar-menu_container p {
-    color: #fff;
+    color: #0e0d0d;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
